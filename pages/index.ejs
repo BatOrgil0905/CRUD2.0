@@ -1,0 +1,29 @@
+<%- include('includes/head') %>
+
+    <h1>Users</h1>
+    <!-- <a href="about"><h4>About</h4></a>
+    <a href="post"><h4>Post</h4></a>
+    <% if(!message){ %>
+        <h1>Зурвас алга байна</h1>
+    <% } else { %>
+        <h1>
+            <%= message %>
+        </h1>
+    <% } %> -->
+    
+        <div class="container">
+            <% for(user of users){ %>
+        </div>
+        <div class="users">
+            <h5>  
+                <a class="username" href="/user/<%= user.id %>"> <%= user.username %></a> 
+            </h5>
+            <div class="button">
+                <a class="edit-button" href="/edit/<%= user.id %>"><button class="edit"><i class="fas fa-pen" ></i></button></a>
+                <form action="/delete-user/<%= user.id %>" method="post">
+                    <button type="submit" class="delete"><i class="fas fa-times"></i></button> 
+                </form>
+            </div>
+        </div>
+            <% } %>
+<%- include('includes/foot') %>

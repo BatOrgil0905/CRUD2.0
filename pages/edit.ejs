@@ -1,0 +1,15 @@
+<%- include('includes/edit_head') %>
+    <div class="wrap">
+        <form action="/edit/<%= userData.id %>" method="post">
+            <label for="username">Username</label>
+            <input value="<%= userData.username %>" id="username" name="username" type="text" placeholder="username">
+
+            <label for="email">Email</label>
+            <input value="<%= userData.email %>" id="email" name="email" type="text" placeholder="email">
+
+            <label for="password">Password</label>
+            <input value="<%= userData.password %>" id="password" name="password" type="password" placeholder="password">
+            <input type="submit" value="Edit">
+        </form>
+    </div>
+<%- include('includes/foot') %>

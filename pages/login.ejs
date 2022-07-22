@@ -1,0 +1,15 @@
+<%- include('includes/login_head') %>
+    <div class="wrap">
+        <form action="/getLoginUser" method="post">
+
+            <h1>Login</h1><hr>
+            
+            <label for="email">Email</label>
+            <input required id="email" name="email" type="email" placeholder="email">
+
+            <label for="password">Password</label>
+            <input required id="password" name="password" type="password" placeholder="password">
+            <input type="submit" value="Login" style="font-size: 15px;">
+        </form>
+    </div>
+<%- include('includes/foot') %>
